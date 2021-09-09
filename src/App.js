@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import "./App.css";
 import Header from "./components/Header";
+import Countdowns from "./pages/Countdowns";
 
 function App() {
   return (
@@ -9,9 +10,7 @@ function App() {
       <div className="container dark">
         <div className="app">
           <Header />
-          <div className="App">
-            <h4>Hello World!</h4>
-          </div>
+          <Route path="/" exact component={Countdowns} />
         </div>
       </div>
     </Router>
