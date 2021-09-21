@@ -11,6 +11,7 @@ const Countdown = ({ match, history }) => {
 
   useEffect(() => {
     getCountdown();
+    // eslint-disable-next-line
   }, [CountdownId]);
 
   let getCountdown = async () => {

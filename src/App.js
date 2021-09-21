@@ -11,6 +11,7 @@ function App() {
       <div className="container dark">
         <div className="app">
           <Header />
+
           <Route path="/" exact component={Countdowns} />
           <Route path="/countdowns/:id" component={Countdown} />
         </div>
