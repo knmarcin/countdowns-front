@@ -1,12 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ListItem = ({ countdown }) => {
   const date = new Date(countdown.date);
   const today = new Date();
   return (
-    <div className="countdowns-list-item">
-      <h3> {countdown.title}</h3>
-      <p>
+    <Link to={`/countdowns/${countdown.id}`}>
+      <div className="countdowns-list-item">
+        <h3> {countdown.title}</h3>
+
         <div className="days-left">
           <span> {countdown.date}</span>
         </div>
@@ -15,8 +17,8 @@ const ListItem = ({ countdown }) => {
             {Math.floor(Math.abs(today - date) / (1000 * 3600 * 24))} days left
           </span>
         </div>
-      </p>
-    </div>
+      </div>
+    </Link>
   );
 };
 

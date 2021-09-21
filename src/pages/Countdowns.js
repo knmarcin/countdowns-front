@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ListItem from "../components/ListItem";
+import AddButton from "../components/AddButton";
 
 const Countdowns = () => {
   let [countdowns, setCountdowns] = useState([]);
@@ -9,7 +10,7 @@ const Countdowns = () => {
   }, []);
 
   let getCountdowns = async () => {
-    let response = await fetch("http://127.0.0.1:8000");
+    let response = await fetch("http://127.0.0.1:8000/countdowns/");
     let data = await response.json();
     setCountdowns(data);
   };
@@ -22,9 +23,10 @@ const Countdowns = () => {
       </div>
       <div className="countdowns-list">
         {countdowns.map((countdowns) => (
-          <ListItem countdown={countdowns} />
+          <ListItem key={countdowns.id} countdown={countdowns} />
         ))}
       </div>
+      <AddButton />
     </div>
   );
 };

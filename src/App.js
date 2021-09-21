@@ -1,8 +1,9 @@
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import "./App.css";
 import Header from "./components/Header";
 import Countdowns from "./pages/Countdowns";
+import Countdown from "./pages/Countdown";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <div className="app">
           <Header />
           <Route path="/" exact component={Countdowns} />
+          <Route path="/countdowns/:id" component={Countdown} />
         </div>
       </div>
     </Router>
