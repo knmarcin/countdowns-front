@@ -4,7 +4,13 @@ One is able to add, delete, update his 'countdowns'. Then it is visible how many
 
 ### App preview
 
-![ScreenShot](/screen-dark.png) ![ScreenShot](/screen-light.png)
+#### Light Mode
+
+![ScreenShot](/screen-light.png)
+
+#### Dark Mode
+
+![ScreenShot](/screen-dark.png)
 
 ### Deployment
 
