@@ -11,7 +11,7 @@ const Countdown = ({ match, history }) => {
 
   useEffect(() => {
     getCountdown();
-  });
+  }, [CountdownId]);
 
   let getCountdown = async () => {
     if (CountdownId === "new") return;
