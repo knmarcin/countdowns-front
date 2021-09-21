@@ -2,4 +2,4 @@
 
 Simple frontend React app connected to backend
 
-# ToDo
+![ScreenShot](/screen.png)
