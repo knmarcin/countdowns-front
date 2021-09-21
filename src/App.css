@@ -240,3 +240,11 @@ a {
   text-align: right;
   font-size: 15px;
 }
+
+.text-areas {
+  text-align: center;
+}
+
+.text-area-1 {
+  display: inline-block;
+}

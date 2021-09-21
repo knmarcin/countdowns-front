@@ -84,20 +84,27 @@ const Countdown = ({ match, history }) => {
           <button onClick={handleSubmit}>Done</button>
         )}
       </div>
-      <textarea
-        onChange={(e) => {
-          setCountdown({ ...Countdown, date: e.target.value });
-        }}
-        placeholder="Edit date"
-        value={Countdown?.date || ""}
-      ></textarea>
-      <textarea
-        onChange={(e) => {
-          setCountdown({ ...Countdown, title: e.target.value });
-        }}
-        placeholder="Edit title"
-        value={Countdown?.title || ""}
-      ></textarea>
+      <div className="text-areas">
+        <div className="text-area-1">
+          <textarea
+            onChange={(e) => {
+              setCountdown({ ...Countdown, title: e.target.value });
+            }}
+            placeholder="Edit title"
+            value={Countdown?.title || ""}
+          ></textarea>
+        </div>
+        <div className="text-area-1">
+          {" "}
+          <textarea
+            onChange={(e) => {
+              setCountdown({ ...Countdown, date: e.target.value });
+            }}
+            placeholder="Edit date"
+            value={Countdown?.date || ""}
+          ></textarea>
+        </div>
+      </div>
     </div>
   );
 };
